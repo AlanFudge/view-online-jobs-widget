@@ -1,59 +1,13 @@
 :root {
-    --bg-color: white;
-    --loader-color: darkslategrey;
+    --bg-color: dimgray;
+    --loader-color: black;
+    --loader-internal: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.loader-outside {
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    background-color: var(--loader-color);
-    border: 16px solid var(--bg-color);
-    animation: spin 2s linear infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-
-.loader-inside {
-    height: 75px;
-    width: 75px;
-    background-color: var(--bg-color);
-    border-radius: 50%;
+body, html, #app {
     margin: 0;
     padding: 0;
-}
-
-@keyframes spin {
-    0% {
-        clip-path: polygon(0 0, 50% 0, 50% 0, 50% 0%, 50% 0%, 50% 50%, 0 50%);
-        transform: rotate(0deg);
-    }
-    12% {
-        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 0 50%);
-    }
-    25% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 50%, 0 50%);
-    }
-    37% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0% 100%, 50% 50%, 0 50%);
-    }
-    55% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 50%, 50% 50%, 0 50%);
-    }
-    65% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0% 100%, 50% 50%, 0 50%);
-    }
-    80% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 50%, 0 50%);
-    }
-    90% {
-        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 0 50%);
-    }
-    100% {
-        clip-path: polygon(0 0, 50% 0, 50% 0, 50% 0%, 50% 0%, 50% 50%, 0 50%);
-        transform: rotate(360deg);
-    }
-    
+    overflow-y: hidden;
+    overflow-x: hidden;
 }

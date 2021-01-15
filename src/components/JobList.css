@@ -1,0 +1,35 @@
+.job-list {
+    background-color: dimgray;
+    height: 350px;
+    width: 350px;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.jobs-container {
+    width: 100%;
+    height: calc(90%);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    position: absolute;
+    top: calc(90% - 20px);
+    left: calc(98% - 200px);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.jobs {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    column-count: 2;
+    column-rule: 2px solid black;
+}
