@@ -38,10 +38,17 @@ class App extends React.Component {
         } else {
             const serverId = window.location.href.match(/(?<=\?server=)\w*/);
             if (serverId) {
-                axios.get("http://localhost:4000/api/" + serverId).then((response) => {
-                    response.data.lastUpdated = new Date();
-                    this.setState(response.data)
-                })
+                const getNewJobs = () => {
+                    axios.get("http://localhost:4000/api/" + serverId).then((response) => {
+                        if (response.data.status == "success") {
+                            response.data.lastUpdated = new Date();
+                            this.setState(response.data)
+                        }
+                    });
+                }
+                getNewJobs();
+
+                setInterval(getNewJobs, 15000);
             }
         }
     }
